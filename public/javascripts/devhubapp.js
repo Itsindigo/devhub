@@ -1,4 +1,3 @@
-(function(){
   var devhubApp = angular.module("devhubApp", []);
 
   function fetch() {
@@ -12,4 +11,3 @@
       fetch();
     });
   });
-});
