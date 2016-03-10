@@ -46,7 +46,7 @@
     "mocha": "^2.4.5",
     "morgan": "^1.7.0",
     "selenium-standalone": "^5.0.0",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
     "protractor": "^3.1.1",
     "selenium-standalone": "^5.0.0",
     "webdriver-manager": "^8.0.0"
