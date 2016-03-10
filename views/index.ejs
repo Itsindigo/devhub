@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="devhubApp">
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/devhubapp.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1 id="title"><%= title %></h1>
     <p>Welcome to <%= title %></p>
   </body>
 </html>
