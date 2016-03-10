@@ -4,33 +4,46 @@
   "description": "Github Profiling Web Application",
   "main": "index.js",
   "scripts": {
-    "test": "grunt",
+    "grunt-test": "grunt",
     "start-test": "nodemon --debug ./bin/test",
     "start-dev": "nodemon --debug ./bin/dev",
-    "start": "node ./bin/www"
+    "start": "node ./public/bin/www",
+    "unit-test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/protractor-conf.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Itsindigo/devhub.git"
   },
-  "author": "Matt, Jeremy, Joe, Ina",
+  "author": "Matt, Jeremy, Joe, Ina, Alex",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Itsindigo/devhub/issues"
   },
   "homepage": "https://github.com/Itsindigo/devhub#readme",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "body-parser": "1.15.0",
+    "cookie-parser": "1.4.1",
+    "debug": "2.0.0",
+    "ejs": "~2.3.3",
     "express": "^4.13.4",
     "grunt": "^0.4.5",
-    "ejs": "~2.3.3"
+    "morgan": "1.4.1",
+    "serve-favicon": "2.3.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "grunt-webdriver": "^1.0.0",
     "mocha": "^2.4.5",
+    "protractor": "^3.1.1",
     "selenium-standalone": "^5.0.0",
-    "wdio-mocha-framework": "^0.2.11",
-    "wdio-sauce-service": "^0.2.2",
-    "webdriverio": "^4.0.3"
+    "webdriver-manager": "^8.0.0"
   }
 }

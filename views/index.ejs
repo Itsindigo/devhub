@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="devhubApp">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Devhub</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+      <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/devhubapp.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class= "text-center col-md-4 col-md-offset-4">
+        <h1 id="title">Devhub Search</h1>
+        <input type="text" ng-model="search" ng-model-options="{debounce:800}" class="form-control" id="username" name="username"/>
+<!--         <button class="btn btn-primary btn-lg margin-top">search</button> -->
+      </div>
+    </div>
+  </div>
   </body>
 </html>
