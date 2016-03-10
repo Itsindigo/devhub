@@ -7,7 +7,7 @@ exports.config = {
     'browserName': 'chrome'
   },
   chromeOnly: true,
-  baseUrl: 'http://localhost:8000/',
+  baseUrl: 'http://localhost:3000/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000
