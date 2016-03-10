@@ -4,10 +4,16 @@
   "description": "Github Profiling Web Application",
   "main": "index.js",
   "scripts": {
-    "test": "grunt",
+    "grunt-test": "grunt",
     "start-test": "nodemon --debug ./bin/test",
     "start-dev": "nodemon --debug ./bin/dev",
-    "start": "node ./public/bin/www"
+    "start": "node ./public/bin/www",
+    "unit-test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/protractor-conf.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +26,17 @@
   },
   "homepage": "https://github.com/Itsindigo/devhub#readme",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "body-parser": "1.15.0",
+    "cookie-parser": "1.4.1",
+    "debug": "2.0.0",
+    "ejs": "~2.3.3",
     "express": "^4.13.4",
     "grunt": "^0.4.5",
-    "ejs": "~2.3.3"
+    "morgan": "1.4.1",
+    "serve-favicon": "2.3.0"
   },
   "devDependencies": {
     "body-parser": "^1.15.0",
