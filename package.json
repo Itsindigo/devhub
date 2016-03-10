@@ -42,6 +42,8 @@
     "chai": "^3.5.0",
     "grunt-webdriver": "^1.0.0",
     "mocha": "^2.4.5",
-    "selenium-standalone": "^5.0.0"
+    "protractor": "^3.1.1",
+    "selenium-standalone": "^5.0.0",
+    "webdriver-manager": "^8.0.0"
   }
 }
