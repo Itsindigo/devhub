@@ -1,4 +1,4 @@
-'use strict';
+'use strict()';
 
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
@@ -14,9 +14,19 @@ describe('Devhub App', function() {
   //   expect(element(by.id('.user_name')));
   // });
 
-  it("should have a search bar", function() {
-    // expect(element(by.id('title')).isDisplayed());
-    expect(element(by.id('title')).getText()).toBe('Devhub Search');
+  describe('homepage', function(){
+
+    it("should have a title", function() {
+      // expect(element(by.id('title')).isDisplayed());
+      expect(element(by.id('title')).getText()).toBe('Devhub Search');
+    });
+
+    it("should have a search bar", function() {
+      expect(element(by.id('username')).isDisplayed());
+    });
+
   });
+
+
 
 });
