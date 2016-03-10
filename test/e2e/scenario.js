@@ -15,7 +15,7 @@ describe('Devhub App', function() {
   // });
 
   it("should have a search bar", function() {
-    expect(element(by.id('#title')).isDisplayed());
+    expect(element(by.id('title')).isDisplayed());
   });
 
 });
