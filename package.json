@@ -4,10 +4,18 @@
   "description": "Github Profiling Web Application",
   "main": "index.js",
   "scripts": {
-    "test": "grunt",
+    "grunt-test": "grunt",
     "start-test": "nodemon --debug ./bin/test",
     "start-dev": "nodemon --debug ./bin/dev",
-    "start": "node ./public/bin/www"
+    "start": "node ./public/bin/www",
+    "unit-test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+    "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run",
+
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/protractor-conf.js"
   },
   "repository": {
     "type": "git",
