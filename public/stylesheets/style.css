@@ -10,4 +10,13 @@ a {
 
 .margin-top{
 	margin-top:20px;
-};
+}
+
+.img-thumbnail {
+  max-width: 200px;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: strong;
+}

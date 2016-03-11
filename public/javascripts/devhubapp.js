@@ -1,13 +1,16 @@
-  var devhubApp = angular.module("devhubApp", []);
+var devhubApp = angular.module("devhubApp", []);
 
-  function fetch() {
-      $http.get('https://api.github.com/users/' + $scope.search)
-      .then(successCallback, errorCallback);
+devhubApp.controller('mainController', ['$scope', '$http', function($scope, $http){
+  $scope.username = '';
+  $scope.user = '';
 
+  $scope.search = function(){
+    $http.get('https://api.github.com/users/' + $scope.username)
+    .then(function successCallback(response) {
+        $scope.user = response.data;
+      }, function errorCallback(response) {
+        console.log(response);
+      });
   };
 
-  devhubApp.controller('UserSearchController', function($scope, $http){
-    $scope.$watch('search', function(){
-      fetch();
-    });
-  });
+}]);

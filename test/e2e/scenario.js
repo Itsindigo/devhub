@@ -3,23 +3,26 @@
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
 describe('Devhub App', function() {
+  var searchBar = element(by.id('username'));
+  var searchButton = element(by.id('search-btn'));
 
   beforeEach(function() {
     browser.get('/');
   });
 
-  // it ("should have a user displayed on the first page", function() {
-  //   var allUsers = element.all(by.repeater('user in users'));
-  //   expect(allUsers.count).not.toBe(0);
-  //   expect(element(by.id('.user_name')));
-  // });
-
   describe('homepage', function(){
 
     it("should have a title, search bar and button", function() {
       expect(element(by.id('title')).getText()).toBe('Devhub Search');
-      expect(element(by.id('username')).isDisplayed());
-      expect(element(by.buttonText('search')).isDisplayed());
+      expect(searchBar.isDisplayed());
+      expect(searchButton.isDisplayed());
+    });
+
+    it("should display a user, when you search for one", function(){
+      searchBar.sendKeys("alexavlonitis");
+      searchButton.click();
+      browser.waitForAngular();
+      expect(element(by.binding('user.login')).getText()).toBe('AlexAvlonitis');
     });
 
   });
