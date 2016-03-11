@@ -13,7 +13,7 @@ describe('Devhub App', function() {
     it("should have a title, search bar and button", function() {
       expect(element(by.id('title')).getText()).toBe('Devhub Search');
       expect(element(by.id('username')).isDisplayed());
-      expect(element(by.buttonText('search')).isDisplayed());
+      // expect(element(by.buttonText('search')).isDisplayed());
     });
 
   });
